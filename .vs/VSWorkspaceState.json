@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Messages.Application",
+    "\\Messages.Application\\Common",
+    "\\Messages.Application\\Common\\Behaviors",
+    "\\Messages.Application\\Messages",
+    "\\Messages.Application\\Messages\\Commands",
+    "\\Messages.Application\\Messages\\Commands\\DeleteMessage",
+    "\\Messages.Persistance",
+    "\\Messages.WebApi",
+    "\\Messages.WebApi\\Models"
+  ],
+  "SelectedNode": "\\Messages.Application\\Messages\\Commands\\DeleteMessage\\DeleteMessageCommandHendlercs.cs",
+  "PreviewInSolutionExplorer": false
+}
