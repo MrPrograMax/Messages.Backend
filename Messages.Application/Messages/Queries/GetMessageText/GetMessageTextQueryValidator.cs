@@ -12,7 +12,6 @@ namespace Messages.Application.Messages.Queries.GetMessageText
         public GetMessageTextQueryValidator() 
         {
             RuleFor(createMessageCommand => createMessageCommand.Id).NotEqual(Guid.Empty);
-            RuleFor(createMessageCommand => createMessageCommand.UserId).NotEqual(Guid.Empty);
         }
     }
 }

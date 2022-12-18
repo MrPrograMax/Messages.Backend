@@ -21,7 +21,7 @@ namespace Messages.Application.Messages.Queries.GetMessageText
             var entity = await _dbContext.Messages
                 .FirstOrDefaultAsync(m => m.Id == request.Id, cancellationToken);
 
-            if (entity == null || entity.UserId != request.UserId) 
+            if (entity == null) 
             {
                 throw new NotFoundException(nameof(Message), request.Id);
             }

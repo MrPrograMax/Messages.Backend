@@ -36,13 +36,13 @@ namespace Messages.WebApi.Controllers
             return Ok(vm);
         }
 
+        [AllowAnonymous]
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<MessageListVm>> Get(Guid id)
         {
             var query = new GetMessageTextQuery
             {
-                UserId = UserId,
                 Id = id
             };
             var vm = await Mediator.Send(query);

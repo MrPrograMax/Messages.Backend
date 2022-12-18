@@ -9,9 +9,8 @@ namespace Messages.WebApi.Models
     {
         [Required]
         public string Title { get; set; }
-
         public string Text { get; set; }
-        public bool DeleteAfterUpload { get; set; }
+        public bool DeleteAfterUpload { get; set; } = false;
 
         public void Mapping(Profile profile) 
         {

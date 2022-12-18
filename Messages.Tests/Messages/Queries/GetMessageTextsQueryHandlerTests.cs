@@ -32,7 +32,6 @@ namespace Messages.Tests.Messages.Queries
             var result = await handler.Handle(
                 new GetMessageTextQuery
                 {
-                    UserId = MessagesContextFactory.UserBId,
                     Id = Guid.Parse("193F07BC-99BB-4EBF-AE47-BA305728DDA9")
                 },
                 CancellationToken.None);

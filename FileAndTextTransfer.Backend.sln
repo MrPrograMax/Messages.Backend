@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messages.Persistance", "Mes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messages.WebApi", "Messages.WebApi\Messages.WebApi.csproj", "{31C726FA-A04B-4347-AE52-758B297AA816}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages.Tests", "Messages.Tests\Messages.Tests.csproj", "{FB5846E0-7954-44D9-86FE-E2FD09FBEB14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messages.Tests", "Messages.Tests\Messages.Tests.csproj", "{FB5846E0-7954-44D9-86FE-E2FD09FBEB14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
