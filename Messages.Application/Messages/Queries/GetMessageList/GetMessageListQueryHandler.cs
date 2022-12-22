@@ -19,6 +19,7 @@ namespace Messages.Application.Messages.Queries.GetMessageList
         public async Task<MessageListVm> Handle(GetMessageListQuery request, CancellationToken cancellationToken)
         {
             var messagesQuery = await _dbContext.Messages
+                .Where(m => m.UserId == request.UserId)
                 .ProjectTo<MessageLookupDto>(_mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);
 
