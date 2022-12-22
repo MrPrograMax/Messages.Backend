@@ -46,6 +46,12 @@ namespace Messages.WebApi.Controllers
                 Id = id
             };
             var vm = await Mediator.Send(query);
+
+            if (vm.DeleteAfterUpload == true)
+            {
+                await Delete(vm.Id);
+            }
+
             return Ok(vm);
         }
 
@@ -61,7 +67,7 @@ namespace Messages.WebApi.Controllers
             return Ok(messageId);
         }
 
-        [HttpPut]
+        /*[HttpPut]
         [Authorize]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -71,13 +77,13 @@ namespace Messages.WebApi.Controllers
             command.UserId = UserId;
             await Mediator.Send(command);
             return NoContent();
-        }
+        }*/
 
         [HttpDelete("{id}")]
         [Authorize] 
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> Delete(Guid id)
+        private async Task<IActionResult> Delete(Guid id)
         {
             var command = new DeleteMessageCommand
             {

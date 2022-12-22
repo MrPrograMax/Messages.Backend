@@ -14,9 +14,6 @@ namespace Messages.Application.Messages.Queries.GetMessageList
         public string UploadUrl { get; set; }
 
 
-
-
-
         public void Mapping(Profile profile)
         {
             profile.CreateMap<Message, MessageLookupDto>()
